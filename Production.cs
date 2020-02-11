@@ -6,9 +6,9 @@ namespace SOLID___Open_Closed_Principle
 {
     public class Production
     {
-        public IEnumerable<ICraftable> Materials { get; set; }
+        public IEnumerable<Craftable> Materials { get; set; }
 
-        public Production(IEnumerable<ICraftable> manyMaterials)
+        public Production(IEnumerable<Craftable> manyMaterials)
         {
             Materials = manyMaterials;
         }
@@ -16,7 +16,7 @@ namespace SOLID___Open_Closed_Principle
         public override string ToString()
         {
             string description = "Object is composed of\n:";
-            foreach (ICraftable material in Materials)
+            foreach (Craftable material in Materials)
             {
                 description += "\t" + material.Type;
             }

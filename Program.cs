@@ -9,27 +9,15 @@ namespace SOLID___Open_Closed_Principle
         {
             Factory factory = new Factory();
 
-            List<Wood> woodBlocks = new List<Wood>
+            IEnumerable<Craftable> craftables = new List<Craftable>
             {
                 new Wood(),
-                new Wood()
-            };
-
-            List<Metal> metalBlocks = new List<Metal>
-            {
-                new Metal(),
                 new Metal()
             };
-            List<Production> manyProductions = new List<Production>
-            {
-                factory.Craft(woodBlocks),
-                factory.Craft(metalBlocks)
-            };
 
-            foreach (Production production in manyProductions)
-            {
-                Console.WriteLine(production);
-            }
+            Production production = factory.Craft(craftables);
+
+            Console.WriteLine(production);
         }
     }
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLID___Open_Closed_Principle
 {
-    public class Metal : ICraftable
+    public class Metal : Craftable
     {
         public string Type
         {
